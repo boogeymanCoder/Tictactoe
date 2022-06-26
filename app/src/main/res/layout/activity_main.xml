@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/turnText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Turn for player O"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/box0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100sp"
+                    android:layout_margin="10sp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif"
+                    android:onClick="mark"
+                    android:textSize="48sp"
+                    android:theme="@style/Button.Teal" />
+
+                <Button
+                    android:id="@+id/box1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100sp"
+                    android:layout_margin="10sp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif"
+                    android:onClick="mark"
+                    android:textSize="48sp"
+                    android:theme="@style/Button.Teal" />
+
+                <Button
+                    android:id="@+id/box2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100sp"
+                    android:layout_margin="10sp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif"
+                    android:onClick="mark"
+                    android:textSize="48sp"
+                    android:theme="@style/Button.Teal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/box3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100sp"
+                    android:layout_margin="10sp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif"
+                    android:onClick="mark"
+                    android:textSize="48sp"
+                    android:theme="@style/Button.Teal" />
+
+                <Button
+                    android:id="@+id/box4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100sp"
+                    android:layout_margin="10sp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif"
+                    android:onClick="mark"
+                    android:textSize="48sp"
+                    android:theme="@style/Button.Teal" />
+
+                <Button
+                    android:id="@+id/box5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100sp"
+                    android:layout_margin="10sp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif"
+                    android:onClick="mark"
+                    android:textSize="48sp"
+                    android:theme="@style/Button.Teal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/box6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100sp"
+                    android:layout_margin="10sp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif"
+                    android:onClick="mark"
+                    android:textSize="48sp"
+                    android:theme="@style/Button.Teal" />
+
+                <Button
+                    android:id="@+id/box7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100sp"
+                    android:layout_margin="10sp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif"
+                    android:onClick="mark"
+                    android:textSize="48sp"
+                    android:theme="@style/Button.Teal" />
+
+                <Button
+                    android:id="@+id/box8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100sp"
+                    android:layout_margin="10sp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif"
+                    android:onClick="mark"
+                    android:textSize="48sp"
+                    android:theme="@style/Button.Teal" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
