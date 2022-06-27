@@ -1,22 +1,21 @@
-package adet.basiccalculator.t174.tictactoe;
+package adet.finalsproject.t174.tictactoe;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
-public class CongratsActivity extends AppCompatActivity {
+public class DrawActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_congrats);
+        setContentView(R.layout.activity_draw);
     }
 
     public void navigateToMain(View v) {
-        Intent intent = new Intent(CongratsActivity.this,MainActivity.class);
+        Intent intent = new Intent(DrawActivity.this,MainActivity.class);
         startActivity(intent);
     }
 }

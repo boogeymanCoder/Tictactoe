@@ -1,4 +1,4 @@
-package adet.basiccalculator.t174.tictactoe;
+package adet.finalsproject.t174.tictactoe;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -178,6 +178,7 @@ public class MainActivity extends AppCompatActivity {
 
             Snackbar.make(v, "Draw!", Snackbar.LENGTH_LONG).show();
             resetGrid();
+            navigateToDraw();
         }
     }
 
@@ -217,6 +218,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void navigateToCongrats() {
         Intent intent = new Intent(MainActivity.this,CongratsActivity.class);
+        startActivity(intent);
+    }
+
+    public void navigateToDraw() {
+        Intent intent = new Intent(MainActivity.this,DrawActivity.class);
         startActivity(intent);
     }
 }

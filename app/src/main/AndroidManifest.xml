@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="adet.basiccalculator.t174.tictactoe">
+    package="adet.finalsproject.t174.tictactoe">
 
     <application
         android:allowBackup="true"
@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tictactoe">
         <activity
-            android:name=".CongratsActivity"
+            android:name="adet.finalsproject.t174.tictactoe.DrawActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="adet.finalsproject.t174.tictactoe.CongratsActivity"
+            android:exported="false" />
+        <activity
+            android:name="adet.finalsproject.t174.tictactoe.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
