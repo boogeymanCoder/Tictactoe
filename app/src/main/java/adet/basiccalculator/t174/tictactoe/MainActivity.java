@@ -2,6 +2,7 @@ package adet.basiccalculator.t174.tictactoe;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -171,6 +172,7 @@ public class MainActivity extends AppCompatActivity {
 
             Snackbar.make(v, "Player " + this.turn + " Wins!", Snackbar.LENGTH_LONG).show();
             resetGrid();
+            navigateToCongrats();
         } else if(isDraw) {
             System.out.println("Draw!");
 
@@ -211,5 +213,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return true;
+    }
+
+    public void navigateToCongrats() {
+        Intent intent = new Intent(MainActivity.this,CongratsActivity.class);
+        startActivity(intent);
     }
 }
