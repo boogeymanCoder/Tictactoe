@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Tictactoe</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="we_have_a_winner">We have a winner</string>
+    <string name="new_game">New game</string>
 </resources>
