@@ -15,7 +15,7 @@ public class CongratsActivity extends AppCompatActivity {
     }
 
     public void navigateToMain(View v) {
-        Intent intent = new Intent(CongratsActivity.this,MainActivity.class);
+        Intent intent = new Intent(CongratsActivity.this,GridActivity.class);
         startActivity(intent);
     }
 }

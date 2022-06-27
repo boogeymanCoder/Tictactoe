@@ -5,4 +5,11 @@
     <string name="new_game">New game</string>
     <string name="its_a_draw">It\'s a draw!</string>
     <string name="another_game">Another game?</string>
+    <string name="welcome">Welcome!</string>
+    <string name="player_o_name">Player O name</string>
+    <string name="player_x_name">Player X name</string>
+    <string name="player_o">Player O:</string>
+    <string name="please_enter_name">Please enter name</string>
+    <string name="player_x">Player X:</string>
+    <string name="start_game">Start game</string>
 </resources>

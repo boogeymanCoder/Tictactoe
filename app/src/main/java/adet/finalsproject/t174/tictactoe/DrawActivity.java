@@ -15,7 +15,7 @@ public class DrawActivity extends AppCompatActivity {
     }
 
     public void navigateToMain(View v) {
-        Intent intent = new Intent(DrawActivity.this,MainActivity.class);
+        Intent intent = new Intent(DrawActivity.this,GridActivity.class);
         startActivity(intent);
     }
 }

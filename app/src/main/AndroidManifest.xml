@@ -10,13 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tictactoe">
         <activity
-            android:name="adet.finalsproject.t174.tictactoe.DrawActivity"
+            android:name=".GridActivity"
             android:exported="false" />
         <activity
-            android:name="adet.finalsproject.t174.tictactoe.CongratsActivity"
+            android:name=".DrawActivity"
             android:exported="false" />
         <activity
-            android:name="adet.finalsproject.t174.tictactoe.MainActivity"
+            android:name=".CongratsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
