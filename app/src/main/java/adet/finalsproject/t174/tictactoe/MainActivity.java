@@ -1,4 +1,4 @@
-package adet.basiccalculator.t174.tictactoe;
+package adet.finalsproject.t174.tictactoe;
 
 import androidx.appcompat.app.AppCompatActivity;
 
