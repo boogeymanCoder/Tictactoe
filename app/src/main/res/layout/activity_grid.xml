@@ -18,18 +18,16 @@
             android:id="@+id/turnText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Turn for player O"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="@string/turn_for_player_o"
             android:textAlignment="center"
             android:textSize="20sp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="50sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="3"
             android:orientation="vertical">
 
             <LinearLayout
@@ -41,35 +39,32 @@
                 <Button
                     android:id="@+id/box0"
                     android:layout_width="wrap_content"
-                    android:layout_height="100sp"
+                    android:layout_height="match_parent"
                     android:layout_margin="10sp"
                     android:layout_weight="1"
                     android:fontFamily="sans-serif"
                     android:onClick="mark"
-                    android:textSize="48sp"
-                    android:theme="@style/Button.Teal" />
+                    android:textSize="48sp" />
 
                 <Button
                     android:id="@+id/box1"
                     android:layout_width="wrap_content"
-                    android:layout_height="100sp"
+                    android:layout_height="match_parent"
                     android:layout_margin="10sp"
                     android:layout_weight="1"
                     android:fontFamily="sans-serif"
                     android:onClick="mark"
-                    android:textSize="48sp"
-                    android:theme="@style/Button.Teal" />
+                    android:textSize="48sp" />
 
                 <Button
                     android:id="@+id/box2"
                     android:layout_width="wrap_content"
-                    android:layout_height="100sp"
+                    android:layout_height="match_parent"
                     android:layout_margin="10sp"
                     android:layout_weight="1"
                     android:fontFamily="sans-serif"
                     android:onClick="mark"
-                    android:textSize="48sp"
-                    android:theme="@style/Button.Teal" />
+                    android:textSize="48sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -81,35 +76,32 @@
                 <Button
                     android:id="@+id/box3"
                     android:layout_width="wrap_content"
-                    android:layout_height="100sp"
+                    android:layout_height="match_parent"
                     android:layout_margin="10sp"
                     android:layout_weight="1"
                     android:fontFamily="sans-serif"
                     android:onClick="mark"
-                    android:textSize="48sp"
-                    android:theme="@style/Button.Teal" />
+                    android:textSize="48sp" />
 
                 <Button
                     android:id="@+id/box4"
                     android:layout_width="wrap_content"
-                    android:layout_height="100sp"
+                    android:layout_height="match_parent"
                     android:layout_margin="10sp"
                     android:layout_weight="1"
                     android:fontFamily="sans-serif"
                     android:onClick="mark"
-                    android:textSize="48sp"
-                    android:theme="@style/Button.Teal" />
+                    android:textSize="48sp" />
 
                 <Button
                     android:id="@+id/box5"
                     android:layout_width="wrap_content"
-                    android:layout_height="100sp"
+                    android:layout_height="match_parent"
                     android:layout_margin="10sp"
                     android:layout_weight="1"
                     android:fontFamily="sans-serif"
                     android:onClick="mark"
-                    android:textSize="48sp"
-                    android:theme="@style/Button.Teal" />
+                    android:textSize="48sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -121,36 +113,38 @@
                 <Button
                     android:id="@+id/box6"
                     android:layout_width="wrap_content"
-                    android:layout_height="100sp"
+                    android:layout_height="match_parent"
                     android:layout_margin="10sp"
                     android:layout_weight="1"
                     android:fontFamily="sans-serif"
                     android:onClick="mark"
-                    android:textSize="48sp"
-                    android:theme="@style/Button.Teal" />
+                    android:textSize="48sp" />
 
                 <Button
                     android:id="@+id/box7"
                     android:layout_width="wrap_content"
-                    android:layout_height="100sp"
+                    android:layout_height="match_parent"
                     android:layout_margin="10sp"
                     android:layout_weight="1"
                     android:fontFamily="sans-serif"
                     android:onClick="mark"
-                    android:textSize="48sp"
-                    android:theme="@style/Button.Teal" />
+                    android:textSize="48sp" />
 
                 <Button
                     android:id="@+id/box8"
                     android:layout_width="wrap_content"
-                    android:layout_height="100sp"
+                    android:layout_height="match_parent"
                     android:layout_margin="10sp"
                     android:layout_weight="1"
                     android:fontFamily="sans-serif"
                     android:onClick="mark"
-                    android:textSize="48sp"
-                    android:theme="@style/Button.Teal" />
+                    android:textSize="48sp" />
             </LinearLayout>
         </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" />
     </LinearLayout>
 </LinearLayout>
