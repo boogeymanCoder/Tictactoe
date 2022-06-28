@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class DrawActivity extends AppCompatActivity {
+public class DrawActivity extends HasNavbarMenu {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

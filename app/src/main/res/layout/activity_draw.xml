@@ -24,11 +24,18 @@
         android:textAlignment="center"
         android:textSize="20sp" />
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="50sp"
+        app:srcCompat="@drawable/referee" />
+
     <Button
         android:id="@+id/newGame2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100sp"
+        android:layout_marginTop="50sp"
         android:onClick="navigateToMain"
         android:text="@string/new_game"
         android:textColor="@color/white"

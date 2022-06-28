@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class CongratsActivity extends AppCompatActivity {
+public class CongratsActivity extends HasNavbarMenu {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

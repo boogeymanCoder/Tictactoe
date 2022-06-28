@@ -1,19 +1,23 @@
 package adet.finalsproject.t174.tictactoe;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends HasNavbarMenu {
 
     EditText playerONameField;
     EditText playerXNameField;
@@ -32,7 +36,12 @@ public class MainActivity extends AppCompatActivity {
         String playerXName = playerXNameField.getText().toString();
 
         if(playerOName.isEmpty() || playerXName.isEmpty()) {
-            Snackbar.make(v, "Please enter player names", Snackbar.LENGTH_LONG).show();
+            Toast.makeText(this, "Please enter player names", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if(playerOName.equals(playerXName)) {
+            Toast.makeText(this, "Players cannot have the same names", Toast.LENGTH_SHORT).show();
             return;
         }
 

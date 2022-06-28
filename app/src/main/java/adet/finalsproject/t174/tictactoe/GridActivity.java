@@ -7,12 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
-public class GridActivity extends AppCompatActivity {
+public class GridActivity extends HasNavbarMenu {
 
     final String EMPTY = "";
     final String X = "X";
@@ -180,13 +181,13 @@ public class GridActivity extends AppCompatActivity {
         if(rowResult || colResult || diagonalResult) {
             System.out.println("Player " + this.turn + " Wins!");
 
-            Snackbar.make(v, "Player " + this.turn + " Wins!", Snackbar.LENGTH_LONG).show();
+            Toast.makeText(this, "Player " + this.turn + " Wins!", Toast.LENGTH_SHORT).show();
             resetGrid();
             navigateToCongrats();
         } else if(isDraw) {
             System.out.println("Draw!");
 
-            Snackbar.make(v, "Draw!", Snackbar.LENGTH_LONG).show();
+            Toast.makeText(this, "Draw!", Toast.LENGTH_SHORT).show();
             resetGrid();
             navigateToDraw();
         }
