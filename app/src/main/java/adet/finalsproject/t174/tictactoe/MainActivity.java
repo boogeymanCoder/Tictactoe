@@ -19,36 +19,14 @@ import java.util.ArrayList;
 
 public class MainActivity extends HasNavbarMenu {
 
-    EditText playerONameField;
-    EditText playerXNameField;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        playerONameField = findViewById(R.id.playerOName);
-        playerXNameField = findViewById(R.id.playerXName);
     }
 
-    public void startGame(View v) {
-        String playerOName = playerONameField.getText().toString();
-        String playerXName = playerXNameField.getText().toString();
-
-        if(playerOName.isEmpty() || playerXName.isEmpty()) {
-            Toast.makeText(this, "Please enter player names", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        if(playerOName.equals(playerXName)) {
-            Toast.makeText(this, "Players cannot have the same names", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        navigateToGrid();
-    }
-
-    public void navigateToGrid() {
+    public void navigateToGrid(View view) {
         Intent intent = new Intent(MainActivity.this,GridActivity.class);
 //        intent.setFlags(intent.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
         startActivity(intent);

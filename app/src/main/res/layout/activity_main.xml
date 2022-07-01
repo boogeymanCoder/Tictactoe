@@ -8,7 +8,7 @@
     android:gravity="center"
     android:orientation="vertical"
     android:padding="10sp"
-    tools:context=".GridActivity">
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/imageView3"
@@ -26,39 +26,11 @@
         android:textAlignment="center"
         android:textSize="40sp" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/player_o" />
-
-    <EditText
-        android:id="@+id/playerXName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/please_enter_name"
-        android:inputType="textPersonName" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/player_x" />
-
-    <EditText
-        android:id="@+id/playerOName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/please_enter_name"
-        android:inputType="textPersonName" />
-
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40sp"
-        android:onClick="startGame"
-        android:text="@string/start_game" />
+        android:onClick="navigateToGrid"
+        android:text="@string/pvp" />
 </LinearLayout>
