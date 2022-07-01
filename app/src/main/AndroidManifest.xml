@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tictactoe">
         <activity
+            android:name=".InfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HasNavbarMenu"
+            android:exported="false" />
+        <activity
             android:name=".GridActivity"
             android:exported="false" />
         <activity
