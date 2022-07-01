@@ -50,6 +50,7 @@ public class MainActivity extends HasNavbarMenu {
 
     public void navigateToGrid() {
         Intent intent = new Intent(MainActivity.this,GridActivity.class);
+//        intent.setFlags(intent.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
         startActivity(intent);
     }
 }

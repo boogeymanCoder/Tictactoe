@@ -15,7 +15,6 @@ public class DrawActivity extends HasNavbarMenu {
     }
 
     public void navigateToMain(View v) {
-        Intent intent = new Intent(DrawActivity.this,GridActivity.class);
-        startActivity(intent);
+        this.finish();
     }
 }

@@ -229,11 +229,13 @@ public class GridActivity extends HasNavbarMenu {
 
     public void navigateToCongrats() {
         Intent intent = new Intent(GridActivity.this,CongratsActivity.class);
+        intent.setFlags(intent.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
         startActivity(intent);
     }
 
     public void navigateToDraw() {
         Intent intent = new Intent(GridActivity.this,DrawActivity.class);
+        intent.setFlags(intent.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
         startActivity(intent);
     }
 }
