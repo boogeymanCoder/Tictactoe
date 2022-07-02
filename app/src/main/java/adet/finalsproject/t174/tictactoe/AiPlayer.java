@@ -9,6 +9,9 @@ public class AiPlayer {
             for(int j = 0; j < 3; j++) {
                 if(grid.getValue(i, j).equals(Grid.EMPTY)){
                     grid.mark(i, j, marker);
+                    if(grid.check()) {
+                        return new Coordinates(i, j);
+                    }
                     int score = minimax(grid, 0, false, marker, 0);
                     grid.mark(i, j, Grid.EMPTY);
 
