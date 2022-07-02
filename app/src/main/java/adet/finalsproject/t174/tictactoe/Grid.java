@@ -12,8 +12,11 @@ public class Grid {
     final static String TIE = "TIE";
     final static String NO_WINNER = "NO_WINNER";
 
-    private String[][] grid = {{EMPTY, EMPTY, EMPTY}, {EMPTY, EMPTY, EMPTY}, {EMPTY, EMPTY, EMPTY}};
+    private String grid[][];
 
+    public Grid() {
+        grid = new String[][] {{EMPTY, EMPTY, EMPTY}, {EMPTY, EMPTY, EMPTY}, {EMPTY, EMPTY, EMPTY}};
+    }
 
     public boolean checkLine(String[] line) {
         String lastBox = EMPTY;

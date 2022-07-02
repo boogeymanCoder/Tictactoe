@@ -13,22 +13,20 @@ import android.widget.Toast;
 import java.util.Random;
 
 public class GridActivity extends HasNavbarMenu {
+    private String turn;
+    private Grid grid;
 
-    String turn = randomTurn(new String[] {Grid.O, Grid.X});
-    Grid grid = new Grid();
+    private Button box0;
+    private Button box1;
+    private Button box2;
+    private Button box3;
+    private Button box4;
+    private Button box5;
+    private Button box6;
+    private Button box7;
+    private Button box8;
 
-    Button box0;
-    Button box1;
-    Button box2;
-    Button box3;
-    Button box4;
-    Button box5;
-    Button box6;
-    Button box7;
-    Button box8;
-
-    TextView turnText;
-
+    private TextView turnText;
 
     @Override
     public boolean onOptionsItemSelected( @NonNull MenuItem item) {
@@ -39,6 +37,9 @@ public class GridActivity extends HasNavbarMenu {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grid);
+
+        turn = randomTurn(new String[] {Grid.O, Grid.X});
+        grid = new Grid();
 
          box0 = findViewById(R.id.box0);
          box1 = findViewById(R.id.box1);

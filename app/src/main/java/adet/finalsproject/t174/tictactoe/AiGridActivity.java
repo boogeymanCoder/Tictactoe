@@ -13,21 +13,21 @@ import android.widget.Toast;
 import java.util.Random;
 
 public class AiGridActivity extends HasNavbarMenu {
-    Grid grid;
-    String turn;
-    String playerMarker;
+    private Grid grid;
+    private String turn;
+    private String playerMarker;
 
-    Button box0;
-    Button box1;
-    Button box2;
-    Button box3;
-    Button box4;
-    Button box5;
-    Button box6;
-    Button box7;
-    Button box8;
+    private Button box0;
+    private Button box1;
+    private Button box2;
+    private Button box3;
+    private Button box4;
+    private Button box5;
+    private Button box6;
+    private Button box7;
+    private Button box8;
 
-    TextView turnText;
+    private TextView turnText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
