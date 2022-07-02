@@ -35,4 +35,5 @@
     <string name="emerald">Emerald</string>
     <string name="theme_preference_key">theme_preference_key</string>
     <string name="application_theme">application_theme</string>
+    <string name="rules">Rules</string>
 </resources>

@@ -29,6 +29,10 @@ public class HasNavbarMenu extends Theme {
     public void navigate(@NonNull MenuItem item) {
 
         switch (item.getItemId()){
+            case R.id.rules:
+                navigateToRules();
+//                Toast.makeText(this, "Info Clicked", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.settings:
                 navigateToSettings();
 //                Toast.makeText(this, "Settings Clicked", Toast.LENGTH_SHORT).show();
@@ -66,6 +70,10 @@ public class HasNavbarMenu extends Theme {
         return super.onOptionsItemSelected(item);
     }
 
+    public void navigateToRules() {
+        Intent intent = new Intent(HasNavbarMenu.this,RulesActivity.class);
+        startActivity(intent);
+    }
 
     public void navigateToSettings() {
         Intent intent = new Intent(HasNavbarMenu.this,SettingsActivity.class);

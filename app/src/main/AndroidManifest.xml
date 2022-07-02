@@ -7,26 +7,33 @@
         android:icon="@mipmap/logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/logo_round"
-
         android:supportsRtl="true"
         android:theme="@style/Theme.Razzmatazz">
+        <activity
+            android:name=".RulesActivity"
+            android:label="Rules"
+            android:exported="false" />
         <activity
             android:name=".YouLoseActivity"
             android:exported="false" />
         <activity
             android:name=".AiGridActivity"
+            android:label="Versus AI"
             android:exported="false" />
         <activity
             android:name=".InfoActivity"
+            android:label="Info"
             android:exported="false" />
         <activity
             android:name=".SettingsActivity"
+            android:label="Settings"
             android:exported="false" />
         <activity
             android:name=".HasNavbarMenu"
             android:exported="false" />
         <activity
             android:name=".GridActivity"
+            android:label="PVP"
             android:exported="false" />
         <activity
             android:name=".DrawActivity"

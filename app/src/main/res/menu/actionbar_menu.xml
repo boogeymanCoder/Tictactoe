@@ -3,6 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
+        android:id="@+id/rules"
+        android:icon="@drawable/ic_baseline_help_24"
+        android:title="@string/rules"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/settings"
         android:icon="@drawable/ic_baseline_settings_24"
         android:title="@string/settings"

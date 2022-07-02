@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class YouLoseActivity extends HasNavbarMenu {
+public class RulesActivity extends Theme {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_you_lose);
+        setContentView(R.layout.activity_rules);
     }
 }
