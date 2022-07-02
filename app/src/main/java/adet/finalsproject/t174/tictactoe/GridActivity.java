@@ -1,10 +1,7 @@
 package adet.finalsproject.t174.tictactoe;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -12,10 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.google.android.material.snackbar.Snackbar;
-
-import java.util.ArrayList;
 
 public class GridActivity extends HasNavbarMenu {
 
@@ -137,16 +130,6 @@ public class GridActivity extends HasNavbarMenu {
     }
 
     public void resetGrid() {
-        Button box0 = findViewById(R.id.box0);
-        Button box1 = findViewById(R.id.box1);
-        Button box2 = findViewById(R.id.box2);
-        Button box3 = findViewById(R.id.box3);
-        Button box4 = findViewById(R.id.box4);
-        Button box5 = findViewById(R.id.box5);
-        Button box6 = findViewById(R.id.box6);
-        Button box7 = findViewById(R.id.box7);
-        Button box8 = findViewById(R.id.box8);
-
         box0.setText(Grid.EMPTY);
         box1.setText(Grid.EMPTY);
         box2.setText(Grid.EMPTY);

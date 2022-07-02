@@ -19,4 +19,5 @@
     <string name="light_mode">Light Mode</string>
     <string name="night_node">Night Mode</string>
     <string name="pvp">PVP</string>
+    <string name="versus_ai">Versus AI</string>
 </resources>

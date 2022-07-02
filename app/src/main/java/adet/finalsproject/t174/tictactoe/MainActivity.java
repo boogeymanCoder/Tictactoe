@@ -31,4 +31,10 @@ public class MainActivity extends HasNavbarMenu {
 //        intent.setFlags(intent.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
         startActivity(intent);
     }
+
+    public void navigateToAiGrid(View view) {
+        Intent intent = new Intent(MainActivity.this,AiGridActivity.class);
+//        intent.setFlags(intent.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
+        startActivity(intent);
+    }
 }
