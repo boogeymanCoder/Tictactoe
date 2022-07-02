@@ -23,4 +23,16 @@
     <string name="nice_try">Nice Try!</string>
     <string name="better_luck_next_time">Better luck next time</string>
     <string name="you_lose">You Lose!</string>
+    <string name="theme">Theme</string>
+    <string name="razzmatazz">Razzmatazz</string>
+    <string name="dark_orchid">Dark Orchid</string>
+    <string name="rose_red">Rose Red</string>
+    <string name="grape">Grape</string>
+    <string name="persian_blue">Persian Blue</string>
+    <string name="lapis_lazuli">Lapis Lazuli</string>
+    <string name="carolina_blue">Carolina Blue</string>
+    <string name="medium_turquoise">Medium Turquoise</string>
+    <string name="emerald">Emerald</string>
+    <string name="theme_preference_key">theme_preference_key</string>
+    <string name="application_theme">application_theme</string>
 </resources>

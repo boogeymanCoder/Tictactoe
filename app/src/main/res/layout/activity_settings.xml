@@ -22,8 +22,84 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/light_mode"
-                android:textColor="@color/text_gray"
                 android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:text="@string/theme"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RadioButton
+                    android:id="@+id/theme_carolina_blue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onThemeSelect"
+                    android:text="@string/carolina_blue" />
+
+                <RadioButton
+                    android:id="@+id/theme_dark_orchid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onThemeSelect"
+                    android:text="@string/dark_orchid" />
+
+                <RadioButton
+                    android:id="@+id/theme_emerald"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onThemeSelect"
+                    android:text="@string/emerald" />
+
+                <RadioButton
+                    android:id="@+id/theme_grape"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onThemeSelect"
+                    android:text="@string/grape" />
+
+                <RadioButton
+                    android:id="@+id/theme_lapis_lazuli"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onThemeSelect"
+                    android:text="@string/lapis_lazuli" />
+
+                <RadioButton
+                    android:id="@+id/theme_medium_turquoise"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onThemeSelect"
+                    android:text="@string/medium_turquoise" />
+
+                <RadioButton
+                    android:id="@+id/theme_persian_blue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onThemeSelect"
+                    android:text="@string/persian_blue" />
+
+                <RadioButton
+                    android:id="@+id/theme_razzmatazz"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onThemeSelect"
+                    android:text="@string/razzmatazz" />
+
+                <RadioButton
+                    android:id="@+id/theme_rose_red"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onThemeSelect"
+                    android:text="@string/rose_red" />
+
+            </RadioGroup>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -104,6 +104,7 @@ public class AiGridActivity extends HasNavbarMenu {
             setTurn(Grid.X);
         } else {
             System.out.println("invalid: " + this.turn + " " + buttonText);
+            return;
         }
 
 //        AI's turn

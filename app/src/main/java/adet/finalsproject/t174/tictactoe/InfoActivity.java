@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class InfoActivity extends AppCompatActivity {
+public class InfoActivity extends Theme {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

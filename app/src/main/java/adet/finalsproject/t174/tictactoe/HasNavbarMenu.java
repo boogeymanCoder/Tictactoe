@@ -11,7 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-public class HasNavbarMenu extends AppCompatActivity {
+public class HasNavbarMenu extends Theme {
 
     @Override
     public boolean onCreateOptionsMenu( Menu menu ) {
@@ -44,7 +44,7 @@ public class HasNavbarMenu extends AppCompatActivity {
     public boolean onOptionsItemSelectedConfirmed( @NonNull MenuItem item ) {
         AlertDialog.Builder alert = new AlertDialog.Builder(HasNavbarMenu.this);
         alert.setTitle("Go to setting");
-        alert.setMessage("Are you sure you? Current operations will be cleared.");
+        alert.setMessage("Are you sure? Current operations will be cleared.");
         alert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 
             @Override
