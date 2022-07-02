@@ -34,6 +34,7 @@ public class AiGridActivity extends HasNavbarMenu {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ai_grid);
 
+        turn = randomTurn(new String[] {Grid.O, Grid.X});
         grid = new Grid();
 
         box0 = findViewById(R.id.ai_box0);
@@ -69,7 +70,6 @@ public class AiGridActivity extends HasNavbarMenu {
         turnText = findViewById(R.id.turnText);
         turnText.setText("Your are " + this.turn);
 
-        turn = randomTurn(new String[] {Grid.O, Grid.X});
     }
 
     @Override
