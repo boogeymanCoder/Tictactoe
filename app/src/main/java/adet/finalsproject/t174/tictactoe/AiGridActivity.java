@@ -13,9 +13,9 @@ import android.widget.Toast;
 import java.util.Random;
 
 public class AiGridActivity extends HasNavbarMenu {
-    Grid grid = new Grid();
-    String turn = randomTurn(new String[] {Grid.O, Grid.X});
-    String playerMarker = turn;
+    Grid grid;
+    String turn;
+    String playerMarker;
 
     Button box0;
     Button box1;
@@ -33,6 +33,8 @@ public class AiGridActivity extends HasNavbarMenu {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ai_grid);
+
+        grid = new Grid();
 
         box0 = findViewById(R.id.ai_box0);
         box1 = findViewById(R.id.ai_box1);
@@ -66,6 +68,8 @@ public class AiGridActivity extends HasNavbarMenu {
 
         turnText = findViewById(R.id.turnText);
         turnText.setText("Your are " + this.turn);
+
+        turn = randomTurn(new String[] {Grid.O, Grid.X});
     }
 
     @Override
@@ -163,10 +167,13 @@ public class AiGridActivity extends HasNavbarMenu {
 
         if(!result.equals(Grid.NO_WINNER)&&!result.equals(Grid.TIE)) {
             String winner = grid.findResult();
-            if(winner.equals(playerMarker)) {
+            if(!winner.equals(turn)) {
                 System.out.println("Player Wins!");
 
                 Toast.makeText(this, "Player Wins!", Toast.LENGTH_SHORT).show();
+                System.out.println("Player wins: (winner:" + winner + ", marker: " + playerMarker + ")");
+                System.out.println("Grid:");
+                System.out.println(grid);
                 resetGrid();
                 navigateToCongrats();
             } else {

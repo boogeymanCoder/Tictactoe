@@ -260,4 +260,20 @@ public class Grid {
         return this.grid[row][col];
     }
 
+    @Override
+    public String toString() {
+        String str = "";
+        for(String[] row: grid) {
+            for(String box: row) {
+                if(box.isEmpty()) {
+                    str += " [ ] ";
+                } else {
+                    str += " [" + box + "] ";
+                }
+            }
+            str += "\n";
+        }
+
+        return str;
+    }
 }
