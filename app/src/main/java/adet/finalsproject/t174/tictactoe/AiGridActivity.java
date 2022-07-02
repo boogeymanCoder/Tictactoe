@@ -13,9 +13,11 @@ import android.widget.Toast;
 import java.util.Random;
 
 public class AiGridActivity extends HasNavbarMenu {
+    private static String GRID = "grid";
+    private static String TURN = "turn";
+
     private Grid grid;
     private String turn;
-    private String playerMarker;
 
     private Button box0;
     private Button box1;
@@ -34,8 +36,13 @@ public class AiGridActivity extends HasNavbarMenu {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ai_grid);
 
-        turn = randomTurn(new String[] {Grid.O, Grid.X});
-        grid = new Grid();
+        if (savedInstanceState != null) {
+            turn = savedInstanceState.getString(TURN);
+            grid = (Grid) savedInstanceState.getSerializable(GRID);
+        } else {
+            turn = randomTurn(new String[] {Grid.O, Grid.X});
+            grid = new Grid();
+        }
 
         box0 = findViewById(R.id.ai_box0);
         box1 = findViewById(R.id.ai_box1);
@@ -69,13 +76,16 @@ public class AiGridActivity extends HasNavbarMenu {
 
         turnText = findViewById(R.id.turnText);
         turnText.setText("Your are " + this.turn);
-
     }
 
     @Override
-    public boolean onOptionsItemSelected( @NonNull MenuItem item) {
-        return super.onOptionsItemSelectedConfirmed(item);
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        outState.putSerializable(GRID, grid);
+        outState.putString(TURN, turn);
+
+        super.onSaveInstanceState(outState);
     }
+
 
     public void setTurn(String turn) {
         this.turn = turn;
@@ -171,9 +181,6 @@ public class AiGridActivity extends HasNavbarMenu {
                 System.out.println("Player Wins!");
 
                 Toast.makeText(this, "Player Wins!", Toast.LENGTH_SHORT).show();
-                System.out.println("Player wins: (winner:" + winner + ", marker: " + playerMarker + ")");
-                System.out.println("Grid:");
-                System.out.println(grid);
                 resetGrid();
                 navigateToCongrats();
             } else {

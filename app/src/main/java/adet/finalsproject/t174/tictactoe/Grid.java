@@ -3,9 +3,10 @@ package adet.finalsproject.t174.tictactoe;
 import android.view.View;
 import android.widget.Toast;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Grid {
+public class Grid implements Serializable {
     final static String EMPTY = "";
     final static String X = "X";
     final static String O = "O";
