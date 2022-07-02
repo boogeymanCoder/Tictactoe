@@ -15,7 +15,6 @@ public class HasNavbarMenu extends Theme {
 
     @Override
     public boolean onCreateOptionsMenu( Menu menu ) {
-
         getMenuInflater().inflate(R.menu.actionbar_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
@@ -42,32 +41,6 @@ public class HasNavbarMenu extends Theme {
 //                Toast.makeText(this, "Info Clicked", Toast.LENGTH_SHORT).show();
                 break;
         }
-    }
-
-
-    public boolean onOptionsItemSelectedConfirmed( @NonNull MenuItem item ) {
-        AlertDialog.Builder alert = new AlertDialog.Builder(HasNavbarMenu.this);
-        alert.setTitle("Go to setting");
-        alert.setMessage("Are you sure? Current operations will be cleared.");
-        alert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                navigate(item);
-            }
-        });
-
-        alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
-
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-            }
-        });
-
-        alert.show();
-
-        return super.onOptionsItemSelected(item);
     }
 
     public void navigateToRules() {

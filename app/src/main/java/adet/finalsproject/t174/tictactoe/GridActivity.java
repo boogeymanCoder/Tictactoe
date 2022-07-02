@@ -13,6 +13,9 @@ import android.widget.Toast;
 import java.util.Random;
 
 public class GridActivity extends HasNavbarMenu {
+    private static String GRID = "grid";
+    private static String TURN = "turn";
+
     private String turn;
     private Grid grid;
 
@@ -28,18 +31,19 @@ public class GridActivity extends HasNavbarMenu {
 
     private TextView turnText;
 
-    @Override
-    public boolean onOptionsItemSelected( @NonNull MenuItem item) {
-        return super.onOptionsItemSelectedConfirmed(item);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grid);
 
-        turn = randomTurn(new String[] {Grid.O, Grid.X});
-        grid = new Grid();
+        if (savedInstanceState != null) {
+            turn = savedInstanceState.getString(TURN);
+            grid = (Grid) savedInstanceState.getSerializable(GRID);
+        } else {
+            turn = randomTurn(new String[] {Grid.O, Grid.X});
+            grid = new Grid();
+        }
 
          box0 = findViewById(R.id.box0);
          box1 = findViewById(R.id.box1);
@@ -73,6 +77,14 @@ public class GridActivity extends HasNavbarMenu {
 
          turnText = findViewById(R.id.turnText);
          turnText.setText("Turn for player " + this.turn);
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        outState.putSerializable(GRID, grid);
+        outState.putString(TURN, turn);
+
+        super.onSaveInstanceState(outState);
     }
 
     public void setTurn(String turn) {
