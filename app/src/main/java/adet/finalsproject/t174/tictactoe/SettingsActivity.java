@@ -15,16 +15,16 @@ import android.widget.RadioButton;
 import android.widget.Switch;
 
 public class SettingsActivity extends Theme implements CompoundButton.OnCheckedChangeListener{
-    Switch lightDarkSwitch = null;
-    RadioButton carolinaBlue;
-    RadioButton darkOrchid;
-    RadioButton emerald;
-    RadioButton grape;
-    RadioButton lapisLazuli;
-    RadioButton mediumTurquoise;
-    RadioButton persianBlue;
-    RadioButton razzmatazz;
-    RadioButton roseRed;
+    private Switch lightDarkSwitch;
+    private RadioButton carolinaBlue;
+    private RadioButton darkOrchid;
+    private RadioButton emerald;
+    private RadioButton grape;
+    private RadioButton lapisLazuli;
+    private RadioButton mediumTurquoise;
+    private RadioButton persianBlue;
+    private RadioButton razzmatazz;
+    private RadioButton roseRed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
