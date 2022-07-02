@@ -10,9 +10,12 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Random;
+
 public class AiGridActivity extends HasNavbarMenu {
     Grid grid = new Grid();
-    String turn = Grid.O;
+    String turn = randomTurn(new String[] {Grid.O, Grid.X});
+    String playerMarker = turn;
 
     Button box0;
     Button box1;
@@ -23,6 +26,8 @@ public class AiGridActivity extends HasNavbarMenu {
     Button box6;
     Button box7;
     Button box8;
+
+    TextView turnText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +63,9 @@ public class AiGridActivity extends HasNavbarMenu {
         box6.setText(grid.getValue(2,0));
         box7.setText(grid.getValue(2,1));
         box8.setText(grid.getValue(2,2));
+
+        turnText = findViewById(R.id.turnText);
+        turnText.setText("Your are " + this.turn);
     }
 
     @Override
@@ -69,7 +77,7 @@ public class AiGridActivity extends HasNavbarMenu {
         this.turn = turn;
 
         TextView turnText = findViewById(R.id.turnText);
-        turnText.setText("Turn for player " + this.turn);
+        turnText.setText("Your are " + this.turn);
     }
 
     public void mark(View v) {
@@ -147,19 +155,28 @@ public class AiGridActivity extends HasNavbarMenu {
 //            System.out.println();
 //        }
 
-        boolean result = grid.check();
+        String result = grid.findResult();
 
         boolean isDraw = grid.checkDraw();
         System.out.println("isDraw: " + isDraw);
 
-        if(result) {
-            System.out.println("Player " + this.turn + " Wins!");
+        if(!result.equals(Grid.NO_WINNER)&&!result.equals(Grid.TIE)) {
+            String winner = grid.findResult();
+            if(winner.equals(playerMarker)) {
+                System.out.println("Player Wins!");
 
-            Toast.makeText(this, "Player " + this.turn + " Wins!", Toast.LENGTH_SHORT).show();
-            resetGrid();
-            navigateToCongrats();
+                Toast.makeText(this, "Player Wins!", Toast.LENGTH_SHORT).show();
+                resetGrid();
+                navigateToCongrats();
+            } else {
+                System.out.println("AI Wins!");
+
+                Toast.makeText(this, "AI Wins!", Toast.LENGTH_SHORT).show();
+                resetGrid();
+                navigateToYouLose();
+            }
             return true;
-        } else if(isDraw) {
+        } else if(result.equals(Grid.TIE)) {
             System.out.println("Draw!");
 
             Toast.makeText(this, "Draw!", Toast.LENGTH_SHORT).show();
@@ -206,5 +223,16 @@ public class AiGridActivity extends HasNavbarMenu {
         Intent intent = new Intent(AiGridActivity.this,DrawActivity.class);
         intent.setFlags(intent.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
         startActivity(intent);
+    }
+
+    public void navigateToYouLose() {
+        Intent intent = new Intent(AiGridActivity.this,YouLoseActivity.class);
+        intent.setFlags(intent.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
+        startActivity(intent);
+    }
+
+    public String randomTurn(String[] turns) {
+        int rnd = new Random().nextInt(turns.length);
+        return turns[rnd];
     }
 }

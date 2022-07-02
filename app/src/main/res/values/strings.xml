@@ -20,4 +20,7 @@
     <string name="night_node">Night Mode</string>
     <string name="pvp">PVP</string>
     <string name="versus_ai">Versus AI</string>
+    <string name="nice_try">Nice Try!</string>
+    <string name="better_luck_next_time">Better luck next time</string>
+    <string name="you_lose">You Lose!</string>
 </resources>

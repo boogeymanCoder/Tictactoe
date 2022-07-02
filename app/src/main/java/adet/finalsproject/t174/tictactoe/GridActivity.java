@@ -10,9 +10,11 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Random;
+
 public class GridActivity extends HasNavbarMenu {
 
-    String turn = Grid.O;
+    String turn = randomTurn(new String[] {Grid.O, Grid.X});
     Grid grid = new Grid();
 
     Button box0;
@@ -24,6 +26,8 @@ public class GridActivity extends HasNavbarMenu {
     Button box6;
     Button box7;
     Button box8;
+
+    TextView turnText;
 
 
     @Override
@@ -65,12 +69,14 @@ public class GridActivity extends HasNavbarMenu {
          box6.setText(grid.getValue(2,0));
          box7.setText(grid.getValue(2,1));
          box8.setText(grid.getValue(2,2));
+
+         turnText = findViewById(R.id.turnText);
+         turnText.setText("Turn for player " + this.turn);
     }
 
     public void setTurn(String turn) {
         this.turn = turn;
 
-        TextView turnText = findViewById(R.id.turnText);
         turnText.setText("Turn for player " + this.turn);
     }
 
@@ -154,5 +160,10 @@ public class GridActivity extends HasNavbarMenu {
         Intent intent = new Intent(GridActivity.this,DrawActivity.class);
         intent.setFlags(intent.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
         startActivity(intent);
+    }
+
+    public String randomTurn(String[] turns) {
+        int rnd = new Random().nextInt(turns.length);
+        return turns[rnd];
     }
 }

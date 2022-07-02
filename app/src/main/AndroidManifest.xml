@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tictactoe">
         <activity
+            android:name=".YouLoseActivity"
+            android:exported="false" />
+        <activity
             android:name=".AiGridActivity"
             android:exported="false" />
         <activity
