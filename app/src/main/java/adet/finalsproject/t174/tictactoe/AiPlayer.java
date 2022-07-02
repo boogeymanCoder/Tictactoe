@@ -28,7 +28,7 @@ public class AiPlayer {
     }
 
     static public int minimax(Grid grid, int depth, boolean isMaximizing, String marker, int lastScore) {
-        System.out.println("minimax(depth: "+depth+", isMaximizing: "+ isMaximizing +", lastScore: " + lastScore + ")");
+//        System.out.println("minimax(depth: "+depth+", isMaximizing: "+ isMaximizing +", lastScore: " + lastScore + ")");
         String result = grid.findResult();
 //        System.out.println("minimax result: " + result);
         if(!result.equals(Grid.NO_WINNER)) {

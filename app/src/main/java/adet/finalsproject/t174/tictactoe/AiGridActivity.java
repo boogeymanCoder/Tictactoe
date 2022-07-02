@@ -99,6 +99,10 @@ public class AiGridActivity extends HasNavbarMenu {
         }
 
 //        AI's turn
+        aiMove(v);
+    }
+
+    public void aiMove(View v) {
         Coordinates aiMove = AiPlayer.bestMove(grid, turn);
         if(aiMove.getRow() == -1 || aiMove.getCol() == -1) {
             System.out.println("Error: Ai cannot find a move");
@@ -127,7 +131,7 @@ public class AiGridActivity extends HasNavbarMenu {
             }
             setTurn(Grid.X);
         } else {
-            System.out.println("invalid: " + this.turn + " " + buttonText);
+            System.out.println("Error: turn - " + this.turn );
         }
     }
 
