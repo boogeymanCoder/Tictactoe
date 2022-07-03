@@ -1,6 +1,8 @@
 package adet.finalsproject.t174.tictactoe;
 
-public class Coordinates {
+import java.io.Serializable;
+
+public class Coordinates implements Serializable {
     private int row;
     private int col;
 
@@ -15,5 +17,10 @@ public class Coordinates {
 
     public int getCol() {
         return col;
+    }
+
+    @Override
+    public String toString() {
+        return "Coordinates{" + row + ", " + col + "}";
     }
 }

@@ -12,6 +12,7 @@ public class Grid implements Serializable {
     final static String O = "O";
     final static String TIE = "TIE";
     final static String NO_WINNER = "NO_WINNER";
+    final static String BLOCK = "🚫";
 
     private String grid[][];
 
@@ -101,7 +102,7 @@ public class Grid implements Serializable {
     public boolean checkDraw() {
         for(String[] row: grid) {
             for(String box: row) {
-                if(box.isEmpty()) {
+                if(box.equals(Grid.EMPTY) || box.equals(Grid.BLOCK)) {
                     return false;
                 }
             }
