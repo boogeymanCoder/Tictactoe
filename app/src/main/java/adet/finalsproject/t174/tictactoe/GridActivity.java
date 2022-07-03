@@ -44,7 +44,6 @@ public class GridActivity extends HasNavbarMenu {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grid);
 
-
         box0 = findViewById(R.id.box0);
         box1 = findViewById(R.id.box1);
         box2 = findViewById(R.id.box2);

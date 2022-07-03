@@ -35,7 +35,19 @@ public class Grid implements Serializable {
         return true;
     }
 
+    public ArrayList<Coordinates> findEmptyBlocks() {
+        ArrayList<Coordinates> emptyBlocks = new ArrayList<>();
 
+        for(int i = 0; i < 3; i++) {
+            for(int j = 0; j < 3; j++) {
+                if(grid[i][j].equals(Grid.EMPTY) || grid[i][j].equals(Grid.BLOCK)) {
+                    emptyBlocks.add(new Coordinates(i, j));
+                }
+            }
+        }
+
+        return emptyBlocks;
+    }
 
     public boolean checkRows() {
         for(String[] row: this.grid) {
